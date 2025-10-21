@@ -47,7 +47,11 @@ from tensorflow.keras.models import load_model
 # -----------------------------
 # Config
 # -----------------------------
-MODEL_FILENAME = "keras_model.h5"
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_FILENAME = os.path.join(BASE_DIR, "keras_Model.h5")
+LABELS_FILENAME = os.path.join(BASE_DIR, "labels.txt")
+
 LABELS_FILENAME = "labels.txt"
 DB_FILENAME = "predictions.db"
 OUTPUTS_DIR = "outputs"
