@@ -52,7 +52,7 @@ from tensorflow.keras.models import load_model
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Archivos y carpetas
-MODEL_FILENAME = os.path.join(BASE_DIR, "keras_Model.h5")
+MODEL_FILENAME = os.path.join(BASE_DIR, "keras_model.h5")  # Fíjate: minúscula según tu archivo
 LABELS_FILENAME = os.path.join(BASE_DIR, "labels.txt")
 DB_FILENAME = os.path.join(BASE_DIR, "predictions.db")
 OUTPUTS_DIR = os.path.join(BASE_DIR, "outputs")
