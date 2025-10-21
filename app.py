@@ -47,19 +47,23 @@ from tensorflow.keras.models import load_model
 # -----------------------------
 # Config
 # -----------------------------
-
+# -----------------------------
+# Directorio base del script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Archivos y carpetas
 MODEL_FILENAME = os.path.join(BASE_DIR, "keras_Model.h5")
 LABELS_FILENAME = os.path.join(BASE_DIR, "labels.txt")
-
-LABELS_FILENAME = "labels.txt"
-DB_FILENAME = "predictions.db"
-OUTPUTS_DIR = "outputs"
+DB_FILENAME = os.path.join(BASE_DIR, "predictions.db")
+OUTPUTS_DIR = os.path.join(BASE_DIR, "outputs")
 GRAPHS_DIR = os.path.join(OUTPUTS_DIR, "graphs")
 IMAGES_DIR = os.path.join(OUTPUTS_DIR, "images")
 ZIP_PATH = os.path.join(OUTPUTS_DIR, "graphs.zip")
+
+# Crear carpetas si no existen
 os.makedirs(GRAPHS_DIR, exist_ok=True)
 os.makedirs(IMAGES_DIR, exist_ok=True)
+
 
 INPUT_SIZE = (224, 224)  # Cambia si tu modelo usa otro tamaño
 
