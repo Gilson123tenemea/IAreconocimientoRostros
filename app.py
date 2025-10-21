@@ -50,9 +50,10 @@ from tensorflow.keras.models import load_model
 # -----------------------------
 # Directorio base del script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_FILENAME = os.path.join(BASE_DIR, "keras_model.h5")  # asegúrate que coincida
 
-# Archivos y carpetas
-MODEL_FILENAME = os.path.join(BASE_DIR, "keras_model.h5")  # Fíjate: minúscula según tu archivo
+print("Buscando modelo en:", MODEL_FILENAME)
+print("Existe?", os.path.exists(MODEL_FILENAME))
 LABELS_FILENAME = os.path.join(BASE_DIR, "labels.txt")
 DB_FILENAME = os.path.join(BASE_DIR, "predictions.db")
 OUTPUTS_DIR = os.path.join(BASE_DIR, "outputs")
