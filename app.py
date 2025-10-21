@@ -47,7 +47,7 @@ from tensorflow.keras.models import load_model
 # -----------------------------
 # Config
 # -----------------------------
-MODEL_FILENAME = "keras_Model.h5"
+MODEL_FILENAME = "keras_model.h5"
 LABELS_FILENAME = "labels.txt"
 DB_FILENAME = "predictions.db"
 OUTPUTS_DIR = "outputs"
